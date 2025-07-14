@@ -28,7 +28,7 @@ export function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                <Link href="#contact" className="flex items-center">
+                <Link href="/resume.pdf" className="flex items-center">
                   Resume
                 </Link>
               </Button>
