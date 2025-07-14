@@ -7,7 +7,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, MapPin, Phone } from "lucide-react"
+import { Mail, MapPin, Phone, Linkedin, Github } from "lucide-react" // Added Linkedin and Github icons
+import Link from "next/link" // Import Link for external links
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -52,7 +53,9 @@ export function Contact() {
             <div className="space-y-4">
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-blue-500 mr-3" />
-                <span>nchhadikar@gmail.com</span>
+                <Link href="mailto:nchhadikar@gmail.com" className="hover:underline">
+                  nchhadikar@gmail.com
+                </Link>
               </div>
               <div className="flex items-center">
                 <Phone className="h-5 w-5 text-blue-500 mr-3" />
@@ -61,6 +64,28 @@ export function Contact() {
               <div className="flex items-center">
                 <MapPin className="h-5 w-5 text-blue-500 mr-3" />
                 <span>Dublin, Ireland</span>
+              </div>
+              <div className="flex items-center">
+                <Linkedin className="h-5 w-5 text-blue-500 mr-3" />
+                <Link
+                  href="https://www.linkedin.com/in/nikhil-chhadikar-a60487154/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  linkedin.com/in/nikhil-chhadikar-a60487154/
+                </Link>
+              </div>
+              <div className="flex items-center">
+                <Github className="h-5 w-5 text-blue-500 mr-3" />
+                <Link
+                  href="https://github.com/Nikhil61097"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  github.com/Nikhil61097
+                </Link>
               </div>
             </div>
           </div>
