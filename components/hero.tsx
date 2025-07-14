@@ -27,10 +27,15 @@ export function Hero() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                <Link href="#contact" className="flex items-center">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700" asChild>
+                <a
+                  href="/Nikhil-Chhadikar-Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
                   Resume
-                </Link>
+                </a>
               </Button>
               <Button variant="outline" size="lg" asChild>
                 <Link href="#projects">View Projects</Link>
