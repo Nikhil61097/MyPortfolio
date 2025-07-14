@@ -12,7 +12,7 @@ export function Hero() {
           <div className="space-y-8">
             <div>
               <p className="text-lg text-blue-600 font-medium mb-2">Hello, I'm</p>
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6">
                 <span className="text-foreground">Nikhil</span>
                 <br />
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -28,14 +28,13 @@ export function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700" asChild>
-                <a
-                  href="/Nikhil Chhadikar-v3.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/resume/nikhil-chhadikar-resume.pdf"
+                  download="Nikhil_Chhadikar_Resume.pdf"
                   className="flex items-center"
                 >
                   Resume
-                </a>
+                </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
                 <Link href="#projects">View Projects</Link>
