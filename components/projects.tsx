@@ -8,43 +8,43 @@ import Image from "next/image"
 export function Projects() {
   const projects = [
     {
-      title: "zSASA - Z-Series Application for System Analysis",
-      description:
-        "Led complete backend development of HSBC's patented batch analysis tool built in Python, analyzing 5000+ COBOL programs and mapping interdependencies across mainframe systems.",
-      image: "/placeholder.svg?height=200&width=400",
-      technologies: ["Python", "COBOL", "System Analysis", "Enterprise Architecture"],
-      liveUrl: "#",
-      githubUrl: "#",
-      category: "Enterprise Software",
-    },
-    {
       title: "Distributed Serverless Spatial Query Processing",
       description:
         "Architected a serverless data analytics system using Python Dask on AWS, enabling scalable spatial query processing over distributed clusters with REST APIs and Dockerized JupyterHub.",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/daskdb-project.png", // Updated to use the provided image
       technologies: ["Python", "Dask", "AWS EC2/S3", "REST API", "Docker"],
       liveUrl: "#",
-      githubUrl: "https://github.com/Nikhil61097/DaskDB",
+      githubUrl: "https://github.com/Nikhil61097/DaskDBDSSSQL",
       category: "Distributed Systems",
     },
     {
       title: "Movie Genres Classification",
       description:
         "Built a multi-label classification model for movie genres using BERT, TF-IDF, and Word2Vec. Compared SVM, Logistic Regression, and transformer-based pipelines with Streamlit UI.",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/movie-classification.png", // Updated to use the provided image
       technologies: ["Python", "BERT", "NLP", "Scikit-learn", "Streamlit"],
       liveUrl: "#",
-      githubUrl: "https://github.com/Nikhil61097/MGC",
+      githubUrl: "https://github.com/Nikhil61097/Movie-Genre-Classification",
       category: "Machine Learning",
     },
     {
       title: "Restaurant Reservation System",
       description:
-        "Designed a secure, role-based full-stack reservation app using Flask and Vue.js with LDAP authentication, encrypted session handling, and admin dashboards.",
-      image: "/placeholder.svg?height=200&width=400",
+        "Designed a secure, role-based full-stack reservation app using Flask and Vue.js with LDAP authentication, encrypted session handling and admin dashboards.",
+      image: "/images/restaurant-reservation.jpg", // Updated to use the provided image
       technologies: ["Flask", "Vue.js", "MySQL", "LDAP", "Docker"],
       liveUrl: "#",
-      githubUrl: "https://github.com/Nikhil61097/RRS",
+      githubUrl: "https://github.com/Nikhil61097/Ichirakus---Restaurant-Reservation-System-",
+      category: "Full-Stack Development",
+    },
+    {
+      title: "Django Task Manager",
+      description:
+        "A simple multi-user task management web application built with Django and Django REST Framework, featuring role-based access control and a user-friendly dashboard.",
+      image: "/images/task-manager.png", // Updated to use the provided image
+      technologies: ["Python", "Django", "Django REST Framework", "SQLite", "JavaScript", "HTML5", "CSS3"],
+      liveUrl: "#", // No live URL provided, keeping as placeholder
+      githubUrl: "https://github.com/Nikhil61097/Django_taskmaster",
       category: "Full-Stack Development",
     },
   ]
