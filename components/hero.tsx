@@ -29,7 +29,7 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700" asChild>
                 <Link
-                  href="/resume/nikhil-chhadikar-resume.pdf"
+                  href="/public/Nikhil Chhadikar-v3.pdf"
                   download="Nikhil_Chhadikar_Resume.pdf"
                   className="flex items-center"
                 >
