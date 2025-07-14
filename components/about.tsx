@@ -1,5 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { Code, Palette, Zap } from "lucide-react"
+import { Code, Palette, Zap, Download } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export function About() {
   return (
@@ -17,19 +19,27 @@ export function About() {
           <div>
             <h3 className="text-2xl font-semibold mb-4">My Story</h3>
             <p className="text-muted-foreground mb-4">
-              Started my journey in computer science with a passion for backend systems and API development. Over 4+
-              years, I've worked with global fintech companies like HSBC, building enterprise-grade solutions that serve
-              millions of users. My experience spans from developing secure REST APIs to automating CI/CD pipelines and
-              leading cross-functional teams.
+              I'm a <strong>Backend Developer</strong> and <strong>Full-Stack Engineer</strong> based in{" "}
+              <strong>Dublin, Ireland</strong>, with a deep focus on APIs and platform engineering. Over the past 4+
+              years, I’ve helped global fintech leaders like HSBC design and build enterprise-grade systems used by
+              millions. From developing secure REST APIs to streamlining CI/CD pipelines and leading cross-functional
+              teams — I turn complex challenges into scalable, robust solutions.
             </p>
             <p className="text-muted-foreground mb-4">
-              During my Master's at University of New Brunswick, I expanded into distributed systems and NLP, building
-              serverless data analytics platforms and machine learning pipelines. I'm passionate about creating
-              scalable, secure backend systems that solve real-world problems.
+              While pursuing my Master’s in Computer Science at the University of New Brunswick, I dove deeper into
+              distributed systems and natural language processing, building everything from serverless data analytics
+              platforms to machine learning pipelines.
             </p>
-            <p className="text-muted-foreground">
-              I believe in writing clean, maintainable code and creating experiences that users love to interact with.
+            <p className="text-muted-foreground mb-6">
+              Whether I’m working on cloud-native infrastructure or fine-tuning backend performance, I’m driven by a
+              single goal: to craft systems that are scalable, secure, and built to last. I believe in writing clean,
+              maintainable code and creating developer experiences that are both powerful and elegant.
             </p>
+            <Button asChild>
+              <Link href="/resume/nikhil-chhadikar-resume.pdf" download="Nikhil_Chhadikar_Resume.pdf">
+                <Download className="mr-2 h-4 w-4" /> Download Resume
+              </Link>
+            </Button>
           </div>
           <div className="space-y-6">
             <Card>
