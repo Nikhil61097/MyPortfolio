@@ -4,12 +4,10 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
-import { cn } from "@/lib/utils" // Assuming cn utility is available
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const [activeSection, setActiveSection] = useState("home") // Default active section
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,41 +17,11 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id)
-          }
-        })
-      },
-      {
-        root: null, // viewport
-        rootMargin: "-50% 0px -50% 0px", // Trigger when section is roughly in the middle of the viewport
-        threshold: 0, // No threshold needed, just intersection
-      },
-    )
-
-    // Observe all sections
-    const sections = document.querySelectorAll("section[id]")
-    sections.forEach((section) => {
-      observer.observe(section)
-    })
-
-    return () => {
-      sections.forEach((section) => {
-        observer.unobserve(section)
-      })
-    }
-  }, [])
-
   const navItems = [
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#skills", label: "Skills" },
     { href: "#experience", label: "Experience" },
-    { href: "#education", label: "Education" }, // Added Education to nav
     { href: "#research", label: "Research" },
     { href: "#projects", label: "Projects" },
     { href: "#contact", label: "Contact" },
@@ -77,11 +45,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={cn(
-                  "text-muted-foreground hover:text-foreground transition-colors",
-                  activeSection === item.href.substring(1) && "text-primary font-semibold",
-                )}
-                onClick={() => setActiveSection(item.href.substring(1))} // Update active section on click
+                className="text-muted-foreground hover:text-foreground transition-colors"
               >
                 {item.label}
               </Link>
@@ -101,14 +65,8 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={cn(
-                  "block py-2 text-muted-foreground hover:text-foreground transition-colors",
-                  activeSection === item.href.substring(1) && "text-primary font-semibold",
-                )}
-                onClick={() => {
-                  setActiveSection(item.href.substring(1))
-                  setIsMenuOpen(false)
-                }}
+                className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </Link>
