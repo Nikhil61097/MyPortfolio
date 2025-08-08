@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Github } from "lucide-react" // Removed ExternalLink as it's no longer needed
+import { Github } from 'lucide-react' // Removed ExternalLink as it's no longer needed
 import Link from "next/link"
 import Image from "next/image"
 
@@ -42,6 +42,15 @@ export function Projects() {
       technologies: ["Python", "Django", "Django REST Framework", "SQLite", "JavaScript", "HTML5", "CSS3"],
       githubUrl: "https://github.com/Nikhil61097/Django_taskmaster",
       category: "Full-Stack Development",
+    },
+    {
+      title: "Mental Health FAQ RAG",
+      description:
+        "A 100% local Retrieval-Augmented Generation (RAG) chatbot for mental health FAQ questions. Runs completely offline using open-source models like Phi-3 mini, with GPU acceleration and privacy-first design - no API keys or cloud dependencies required.",
+      image: "/images/mental-health-rag.png",
+      technologies: ["Python", "RAG", "Transformers", "Sentence-Transformers", "Phi-3", "PyTorch", "CUDA"],
+      githubUrl: "https://github.com/Nikhil61097/Mental-health-RAG",
+      category: "AI/ML & Privacy",
     },
   ]
 

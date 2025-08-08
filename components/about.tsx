@@ -36,7 +36,7 @@ export function About() {
               maintainable code and creating developer experiences that are both powerful and elegant.
             </p>
             <Button asChild>
-              <Link href="resume.pdf" download="Nikhil_Chhadikar_Resume.pdf">
+              <Link href="/resume/nikhil-chhadikar-resume.pdf" download="Nikhil_Chhadikar_Resume.pdf">
                 <Download className="mr-2 h-4 w-4" /> Download Resume
               </Link>
             </Button>
